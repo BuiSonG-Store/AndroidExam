@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:paddingLeft="10sp"
-    android:paddingRight="10sp"
+    android:paddingHorizontal="10dp"
     >
 
     <TextView
-        android:layout_marginBottom="20sp"
+        android:paddingVertical="12dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Employee App"
@@ -27,6 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="47dp"
         android:background="@color/white"
+        android:paddingHorizontal="12dp"
         android:hint="Enter Employee Name"
         tools:layout_editor_absoluteX="190dp"
         tools:layout_editor_absoluteY="192dp" />
@@ -38,6 +37,7 @@
         android:layout_height="47dp"
         android:background="@color/white"
         android:hint="Enter Designation"
+        android:paddingHorizontal="12dp"
         tools:layout_editor_absoluteX="190dp"
         tools:layout_editor_absoluteY="192dp" />
 
@@ -48,6 +48,7 @@
         android:layout_height="47dp"
         android:background="@color/white"
         android:hint="Enter Salary"
+        android:paddingHorizontal="12dp"
         tools:layout_editor_absoluteX="190dp"
         tools:layout_editor_absoluteY="192dp" />
 
@@ -57,34 +58,33 @@
         android:orientation="horizontal"
         >
         <Button
-            android:layout_marginLeft="10sp"
             android:backgroundTint="#AEAEAE"
             android:id="@+id/btn_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add Employee"
-            android:textSize="11dp"
+            android:textSize="12dp"
             android:textColor="@color/black"
             tools:layout_editor_absoluteX="104dp"
             tools:layout_editor_absoluteY="314dp" />
 
         <Button
-            android:layout_marginLeft="10sp"
+            android:layout_marginLeft="6dp"
             android:backgroundTint="#AEAEAE"
             android:id="@+id/btn_Update"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Update Record"
-            android:textSize="11dp"
+            android:textSize="12dp"
             android:textColor="@color/black"
             tools:layout_editor_absoluteX="104dp"
             tools:layout_editor_absoluteY="314dp" />
 
         <Button
-            android:layout_marginLeft="10sp"
+            android:layout_marginLeft="6dp"
             android:backgroundTint="#AEAEAE"
             android:id="@+id/btn_delete"
-            android:textSize="11dp"
+            android:textSize="12dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Delete"
