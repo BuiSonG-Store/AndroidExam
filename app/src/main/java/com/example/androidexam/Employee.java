@@ -13,5 +13,5 @@ public class Employee {
     @ColumnInfo(name = "designation")
     public String designation;
     @ColumnInfo(name = "salary")
-    public int salary;
+    public String salary;
 }
