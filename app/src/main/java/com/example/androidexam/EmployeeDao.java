@@ -14,7 +14,8 @@ import java.util.List;
 public interface EmployeeDao {
     @Insert(onConflict = REPLACE)
     long insert_employee(Employee employee);
-
+    @Update
+    int update_employee(Employee user);
 
     @Query("SELECT * FROM employee")
     List<Employee> getAll_employee();
