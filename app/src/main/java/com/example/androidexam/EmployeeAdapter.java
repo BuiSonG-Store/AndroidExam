@@ -23,14 +23,14 @@ public class EmployeeAdapter extends RecyclerView.Adapter {
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemview = activity.getLayoutInflater().inflate(R.layout.list,parent,false);
-        EmployeeHoder hoder = new EmployeeHoder(itemview);
-        return hoder;
+        View itemView = activity.getLayoutInflater().inflate(R.layout.list,parent,false);
+        EmployeeHolder holder = new EmployeeHolder(itemView);
+        return holder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        EmployeeHoder hoder = (EmployeeHoder) holder;
+        EmployeeHolder hoder = (EmployeeHolder) holder;
         Employee model = employeeList.get(position);
         hoder.tvName.setText(model.name);
         hoder.tvDes.setText(model.designation);
@@ -38,9 +38,6 @@ public class EmployeeAdapter extends RecyclerView.Adapter {
         hoder.setItemClickListener(new ItemClickListener() {
             @Override
             public void onClick(View view, int position, boolean isLongClick) {
-//                Intent intent = new Intent(view.getContext(),EditUser.class);
-//                intent.putExtra("id_select",userList.get(position).id);
-//                activity.startActivity(intent);
             }
         });
     }
@@ -50,7 +47,7 @@ public class EmployeeAdapter extends RecyclerView.Adapter {
         return employeeList.size();
     }
 
-    public class EmployeeHoder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
+    public class EmployeeHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
         private ItemClickListener itemClickListener;
 
         TextView tvName;
@@ -58,11 +55,11 @@ public class EmployeeAdapter extends RecyclerView.Adapter {
         TextView tvSalary;
 
 
-        public EmployeeHoder (@NonNull View itemview){
-            super(itemview);
-            tvName = itemview.findViewById(R.id.item_name);
-            tvDes = itemview.findViewById(R.id.item_des);
-            tvSalary = itemview.findViewById(R.id.item_salary);
+        public EmployeeHolder (@NonNull View itemView){
+            super(itemView);
+            tvName = itemView.findViewById(R.id.item_name);
+            tvDes = itemView.findViewById(R.id.item_des);
+            tvSalary = itemView.findViewById(R.id.item_salary);
             itemView.setOnClickListener(this);
             itemView.setOnLongClickListener(this);
         }
